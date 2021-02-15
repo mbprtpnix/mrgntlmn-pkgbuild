@@ -1,9 +1,8 @@
 #!/bin/bash
-#set -e
+#set -e -u
 ##################################################################################################################
 # Author 	: 	MrGntlmn
 # Website : 	https://www.mrgntlmn.tk/
-#
 ##################################################################################################################
 #
 # DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
@@ -18,7 +17,7 @@ git add --all .
 
 # Give a comment to the commit if you want.
 echo "####################################"
-echo "Write your commit comment!"
+echo "### Write your commit comment!"
 echo "####################################"
 
 read input
@@ -33,5 +32,5 @@ git push -u origin main
 
 
 echo "####################################"
-echo "Git Push Done!"
+echo "### Git Push Done!"
 echo "####################################"
