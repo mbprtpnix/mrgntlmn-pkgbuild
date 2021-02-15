@@ -1,0 +1,18 @@
+pkgname=nemesis-wallpapers
+_pkgname=nemesis-wallpapers
+_destname1="/usr/share/backgrounds/nemesis/"
+pkgver=21.02
+pkgrel=1
+pkgdesc="Wallpapers"
+arch=('any')
+url="https://github.com/mbprtpnix/nemesis-wallpapers.git"
+license=('GPL3')
+makedepends=('git')
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(${_pkgname}::"git+https://github.com/mbprtpnix/${_pkgname}.git")
+sha256sums=('SKIP')
+package() {
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}${_destname1}* ${pkgdir}${_destname1}
+}
